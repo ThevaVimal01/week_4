@@ -1,6 +1,6 @@
 <%-- 
-    Document   : first
-    Created on : 30-May-2023, 10:16:41 PM
+    Document   : second
+    Created on : 30-May-2023, 10:29:20 PM
     Author     : theva
 --%>
 
@@ -12,10 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World! </h1>
-        <form method="post" action="home">
-            <input type="submit"/>
-        </form>
-            
+        <h1>Hello World! second.jsp</h1>
+        <h1> received</h1>
+        <p>${data}</p>
     </body>
 </html>
