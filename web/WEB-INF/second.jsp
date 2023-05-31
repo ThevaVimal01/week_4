@@ -1,19 +1,16 @@
-<%-- 
-    Document   : second
-    Created on : 30-May-2023, 10:29:20 PM
-    Author     : theva
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <c:import url="/includes/header.jsp" />
+
         <h1>Hello World! second.jsp</h1>
         <h1> received</h1>
-        <p>${data}</p>
-    </body>
-</html>
+        <h3>${student.fName}</h3>
+        <h3>${student.lName}</h3>
+         <h3>${student.laptop.model}</h3>
+         <c:if test="${message == true}">
+             <h1>The message is true.</h1>
+             
+         </c:if>
+             
+         <c:import url="/includes/footer.jsp" />
+    

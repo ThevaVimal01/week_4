@@ -13,14 +13,18 @@ import java.io.Serializable;
 public class Student implements Serializable{
     private String fName;
     private String lName;
+    private Laptop laptop;
     
     public Student(){
     }
 
-    public Student(String fName, String lName) {
+    public Student(String fName, String lName, Laptop laptop) {
         this.fName = fName;
         this.lName = lName;
+        this.laptop = laptop;
     }
+
+    
     
 
     public String getfName() {
@@ -37,6 +41,14 @@ public class Student implements Serializable{
 
     public void setlName(String lName) {
         this.lName = lName;
+    }
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
     }
     
 }

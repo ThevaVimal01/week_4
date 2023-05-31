@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Laptop;
+import model.Student;
 
 /**
  *
@@ -36,7 +38,10 @@ public class RenderServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("data", 4555);
+        Laptop l = new Laptop("Apple");
+        Student s =new Student("Bob","Tom",l);
+        request.setAttribute("student", s);
+        request.setAttribute("message", false);
          getServletContext().getRequestDispatcher("/WEB-INF/second.jsp").forward(request, response);
         
         
